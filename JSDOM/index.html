@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ชื่อ: <input 
+    id="fanme"
+    class="input"
+    type="text"
+    name="fanme"
+    value="John"> -->
+    <!-- นามสกุล: <input
+        id="lnanme"
+        class="input"
+        type="text"
+        name="fanme"
+        value=" Doe"> -->
+        <!-- <input type="checkbox"name="hobby" value="foodball">football
+        <input type="checkbox" name="hobby" value="basketball">basketball
+        <input type="checkbox" name="hobby" value="tennis">tennis -->
+    <!-- <button onclick="userClicked()">submit</button>
+    <div onclick="dewClicked()">dev clicked</div> -->
+
+    เพศ:
+   
+    <input type="radio" name="gender" value="male" onchange="onchangeGender()" checked='true'>ชาย
+    <input type="radio" name="gender" value="female" onchange="onchangeGender()">หญิง
+    <script>
+        //Select Dom
+        // const fanmeInput=document.getElementById("fname");
+        // console.log(fanmeInput);
+        // const fanmeInput = document.getElementsByClassName('input')
+        // console.log(fanmeInput);
+        // for (let i =0; i < fanmeInput.length; i++){
+        //     console.log(fanmeInput[i].value);
+        // }
+        // const fanmeInput = document.querySelector('#fname');
+        // console.log(fanmeInput.value);
+        // const fanme= document.querySelector('input[name= "fname"]');
+    //     let checkboxs=document.querySelectorAll('input[name="hobby"]');
+    //     for (let i =0; i <checkboxs.length;i++){
+    //         console.log(checkboxs[i].value);
+    //     }
+    // function userClicked(){
+    //     console.log("User clicked the button")
+    // }
+    // function dewClicked(){
+    //     console.log("Developer clicked the div!");
+    // }
+    function onchangeGender(){
+        // console.log('onchabgeGender');
+        //เลือก gender ทุก input ออกมา
+        let genderInputs =document.querySelectorAll('input[name="gender"]');
+
+        //เช็ค ตัวไหน มี check อยู่ ให้เอา value มาแสดง
+        for(let i= 0;i < genderInputs.length; i++){
+            if (genderInputs[i].checked){
+                console.log("เพศที่เลือก: "+genderInputs[i].value);
+            }
+        }
+
+
+    }
+     </script>
+    
+</body>
+</html>
