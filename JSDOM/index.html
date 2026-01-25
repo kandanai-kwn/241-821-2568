@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- ชื่อ: <input 
+    <!ชื่อ: <input 
     id="fanme"
     class="input"
     type="text"
@@ -24,11 +24,11 @@
     <!-- <button onclick="userClicked()">submit</button>
     <div onclick="dewClicked()">dev clicked</div> -->
 
-    เพศ:
+    <!-- เพศ:
    
     <input type="radio" name="gender" value="male" onchange="onchangeGender()" checked='true'>ชาย
-    <input type="radio" name="gender" value="female" onchange="onchangeGender()">หญิง
-    <script>
+    <input type="radio" name="gender" value="female" onchange="onchangeGender()">หญิง -->
+     <script>
         //Select Dom
         // const fanmeInput=document.getElementById("fname");
         // console.log(fanmeInput);
@@ -50,21 +50,80 @@
     // function dewClicked(){
     //     console.log("Developer clicked the div!");
     // }
-    function onchangeGender(){
-        // console.log('onchabgeGender');
-        //เลือก gender ทุก input ออกมา
-        let genderInputs =document.querySelectorAll('input[name="gender"]');
+    // function onchangeGender(){
+    //     // console.log('onchabgeGender');
+    //     //เลือก gender ทุก input ออกมา
+    //     let genderInputs =document.querySelectorAll('input[name="gender"]');
 
-        //เช็ค ตัวไหน มี check อยู่ ให้เอา value มาแสดง
-        for(let i= 0;i < genderInputs.length; i++){
-            if (genderInputs[i].checked){
-                console.log("เพศที่เลือก: "+genderInputs[i].value);
+    //     //เช็ค ตัวไหน มี check อยู่ ให้เอา value มาแสดง
+    //     for(let i= 0;i < genderInputs.length; i++){
+    //         if (genderInputs[i].checked){
+    //             console.log("เพศที่เลือก: "+genderInputs[i].value);
+    //         }
+    //     }
+
+
+    // }
+//      </script>
+     </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type ="text" name="fanme" onkeydown="onkeydownFname()"> -->
+     <!-- <button onmouseover="onmouseoverFname()"
+     onmouseup="onmouseupFname()"
+     onmousedown="onmousedownFname()"
+     >click me</button> -->
+    <!-- <div id ="hi">Hi <span style="display: none;">A</span></div> -->
+     <input type="checkbox" name="interest" value="กีฟา">กีฟา
+      <input type="checkbox" name="interest" value="ดรตรี">ดรตรี
+       <input type="checkbox" name="interest" value="อ่านหนังสือ">อ่านหนังสือ
+       <br><br>
+       <button onclick="submitInterest()">ส่งข้อมูล</button>
+        <div id="content"></div>
+    <script>
+        // function onkeydown(){
+        //   let fname = document.querySelector('input[name="fname"]')
+        //   console.log('fname',fname.value)
+       // }
+    //    function onmouseoverFname(){
+    //     console.log("Mouse is over")
+    //    }
+    //    function onmouseupFname(){
+    //     console.log("Mouse is up")
+    //    }
+    //    function onmousedownFname(){
+    //     console.log("Mouse is down")
+    //    }
+        // let hidom = document.getElementById("hi");
+        // hidom.innerHTML='hello A <b>a</b>'
+        // console.log(hidom.textContent);
+        // console.log(hidom.innerText);
+        // console.log(hidom.innerHTML)
+        function submitInterest(){
+            // ดึงข้อมูลจาก checkbox ที่ ถูกเลือก
+            let checkboxs = document.querySelectorAll('input[name="interest"]');
+            let contentHTML='<ul>';
+            for (let i = 0;i < checkboxs.length; i++){
+                if (checkboxs[i].checked){
+                    console.log(checkboxs[i].value);//แสดงค่าที่เลือกใน consloe
+                    contentHTML += '<li>'+checkboxs[i].value+'</li>';
+                }
             }
+            contentHTML+='</ul>'
+            // ใส่ html ที่สร้างขึ้นมนกลไก div id ="cintent"
+            let contentDiv =document.getElementById('content');
+            contentDiv.innerHTML= contentHTML;
         }
 
 
-    }
-     </script>
+    </script>
     
 </body>
 </html>
