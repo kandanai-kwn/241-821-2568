@@ -1,0 +1,10 @@
+docker ps --all
+docker run busybox ls
+docker run hell-world
+docker run busybox ping google.com
+docker stop
+docker pull busybox
+docker start 
+docker rm 
+docker run -d -p 9000:80 nginx
+docker exec -it      sh
