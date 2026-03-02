@@ -27,6 +27,22 @@ body {
     color: var(--text-main);
 }
 
+.message{
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    
+}
+.message.success{
+    background-color: #00ff91;
+    color: #ffffff;
+}
+.message.danger{
+    background-color: #ff0000;
+    color: white;
+}
+
 /* เพิ่มลูกเล่นวงกลมสีจางๆ ด้านหลัง */
 body::before {
     content: '';
