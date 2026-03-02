@@ -32,7 +32,6 @@ const submitData = async ()=> {
     console.log('response',response)
     messageDOM.innerText='บันทึกข้อมูลสำเร็จ'
     messageDOM.className='message success'
-    console.log('submitData',userData);
     
   } catch (error) {
     if(error.response){
@@ -42,5 +41,6 @@ const submitData = async ()=> {
     messageDOM.className='message danger'
     
   }
+console.log('submitData',userData);
 
 }
