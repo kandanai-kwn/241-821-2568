@@ -68,6 +68,12 @@ app.get('/test', (req, res) => {
 app.get('/users', (req, res) => {
     res.json(users);
 });
+const BAES_URL='http://localhost:8000';
+
+let mode='CREATE';
+let selectedId=''
+
+
 
 const validateData = (userData) => {
     let errors = [];
